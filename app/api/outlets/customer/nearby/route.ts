@@ -17,26 +17,20 @@ export async function GET(request: NextRequest) {
       )
     }
 
-   const apiUrl =
-  `http://srv1617582.hstgr.cloud:8084/api/fm/outlets/customer/nearby` +
+  const apiUrl =
+  `http://srv1617582.hstgr.cloud:8084/api/fm/outlets/public/customer/nearby` +
   `?lat=${encodeURIComponent(lat)}` +
   `&lng=${encodeURIComponent(lng)}`
 
-  console.log("Nearby API URL:", apiUrl)
-console.log(
-  "Token exists:",
-  !!process.env.OUTLETS_API_TOKEN
-)
-    console.log("Calling:", apiUrl)
+console.log("Calling:", apiUrl)
 
-    const response = await fetch(apiUrl, {
-      method: "GET",
-      headers: {
-        accept: "*/*",
-        Authorization: process.env.OUTLETS_API_TOKEN!,
-      },
-      cache: "no-store",
-    })
+const response = await fetch(apiUrl, {
+  method: "GET",
+  headers: {
+    accept: "*/*",
+  },
+  cache: "no-store",
+})
 
     const data = await response.json()
 

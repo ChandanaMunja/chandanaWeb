@@ -45,7 +45,7 @@ export function Hero() {
 
             <div className="mt-9 flex flex-wrap items-center gap-4">
               <a
-                href="https://play.google.com/store/apps/details?id=com.jippymart.customer"
+            href="/jippy-mart-qrcode"
                  target="_blank"
   rel="noopener noreferrer"
                 className="group inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-base font-semibold text-primary-foreground transition-transform hover:-translate-y-0.5"
