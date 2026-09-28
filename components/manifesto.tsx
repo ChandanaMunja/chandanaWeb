@@ -36,7 +36,7 @@ export function Manifesto() {
             We don&apos;t do fake food.
           </h2>
           <p className="mt-5 text-lg text-muted-foreground text-pretty">
-            Four rules we don&apos;t break. They&apos;re printed on the wall of our Tirupati office. They keep the food
+            Four rules we don&apos;t break. They&apos;re printed on the wall of our Hyderabad office. They keep the food
             good.
           </p>
         </div>

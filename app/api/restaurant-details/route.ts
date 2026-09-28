@@ -16,21 +16,19 @@ export async function GET(request: NextRequest) {
       )
     }
 
-    const apiUrl =
-  `http://srv1617582.hstgr.cloud:8084/api/fm/outlets/getOutletDetails` +
-  `?outletId=${encodeURIComponent(outletId)}` +
-  `&userType=customer`
+const apiUrl =
+  `http://srv1617582.hstgr.cloud:8084/api/fm/outlets/public/outlet-details` +
+  `?outletId=${encodeURIComponent(outletId)}`
 
     console.log("Restaurant details API:", apiUrl)
 
     const response = await fetch(apiUrl, {
-      method: "GET",
-      headers: {
-        accept: "*/*",
-        Authorization: process.env.OUTLETS_API_TOKEN!,
-      },
-      cache: "no-store",
-    })
+  method: "GET",
+  headers: {
+    accept: "*/*",
+  },
+  cache: "no-store",
+})
 
     const data = await response.json()
 

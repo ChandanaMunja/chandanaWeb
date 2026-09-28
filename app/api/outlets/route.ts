@@ -5,26 +5,14 @@ export async function GET() {
     const apiUrl =
       "http://srv1617582.hstgr.cloud:8084/api/fm/outlets"
 
-    const token = process.env.OUTLETS_API_TOKEN
-
-    if (!token) {
-      return NextResponse.json(
-        {
-          success: false,
-          message: "API token is missing",
-        },
-        { status: 500 }
-      )
-    }
-
-    const response = await fetch(apiUrl, {
-      method: "GET",
-      headers: {
-        accept: "*/*",
-        Authorization: token,
-      },
-      cache: "no-store",
-    })
+ 
+const response = await fetch(apiUrl, {
+  method: "GET",
+  headers: {
+    accept: "*/*",
+  },
+  cache: "no-store",
+})
 
     const data = await response.json()
 
